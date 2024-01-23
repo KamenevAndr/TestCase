@@ -54,9 +54,10 @@ tbody tr:after {
 }
 
 .formBtns {
+    display: flex;
     flex-direction: row;
     margin-top: 5px;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 10px;
 }
 
