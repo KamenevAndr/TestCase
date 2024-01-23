@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management App</title>
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>New Item</h4>
+                <span class="close" onclick="P.closeModal()">&#10006;</span>
+            </div>
+            <hr>
+            <form id="addItemForm">
+                <label for="itemName">Name:</label>
+                <input type="text" id="itemName" required>
+                <label for="itemPrice">Price:</label>
+                <input type="text" id="itemPrice" required>
+                <label for="itemDateTime">Date and Time:</label>
+                <input type="text" id="itemDateTime" placeholder="dd.mm.yyyy hh:mm:ss" required>
+                <div class="formBtns">
+                    <hr>                
+                    <button id="cnclBtn" onclick="P.closeModal()">Close</button>
+                    <button type="button" id="addBtn" onclick="P.addItem()">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <h1>Items in Stock</h1>
+    <table id="itemTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Date and Time</th>
+            </tr>
+        </thead>
+        <tbody id="itemTableBody"></tbody>
+    </table>
+    <button id="newItemBtn" onclick="P.openModal()">New Item</button>
+
+</body>
+</html>
